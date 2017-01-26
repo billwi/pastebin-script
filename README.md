@@ -12,7 +12,7 @@ linux command line script that uploads text to numerous pastebin-type sites. The
 * cxg.de: http://cxg.de
 
 
-* Want more sites? Submit an issue with the website and I will see if I can add it.
+Want more sites? Submit an issue with the website and I will see if I can add it.
 
 ## How to get it, how to use it
 Download the script from this repository, made it executable (chmod x+r pastebin) and run:
