@@ -10,7 +10,8 @@ linux command line script that uploads text to numerous pastebin-type sites. The
 * tny.cz: http://tny.cz
 * clitxt.com: http://clitxt.com
 * cxg.de: http://cxg.de
-*  
+
+
 * Want more sites? Submit an issue with the website and I will see if I can add it.
 
 ## How to get it, how to use it
