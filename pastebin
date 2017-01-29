@@ -23,7 +23,6 @@ show_help() {
 	echo -e "\t-w\tSend text to public webpage pastebin.com using form post (no API)"
 	echo -e "\t-s\tSend text to sprunge.us"
 	echo -e "\t-c\tSend text to pastebin.ca"
-	echo -e "\t-a\tSend text to pastie.org"
 	echo -e "\t-t\tSend text to paste2.org"
 	echo -e "\t-n\tSend text to tny.cz"
 	echo -e "\t-x\tSend text to clitxt.com"
@@ -76,13 +75,6 @@ pastebin_ca() {
 	url=${ret#SUCCESS:}
 	echo $root$url | $xclip;
 	echo $root$url;
-}
-
-pastie() {
-	# http://pastie.org/904797
-	url=$(curl pastie.org/pastes -F "paste[body]=$paste" -F "paste[parser]=plaintext" -F "paste[authorization]=burger" -s -L -o /dev/null -w "%{url_effective}"); 
-	echo $url | $xclip;
-	echo $url;
 }
 
 # As of Jun 23, 2012 pidgin's nopaste gives 500 Internal Error
@@ -151,10 +143,6 @@ while getopts ":hspuwcatrxb" opt; do
 		c)
 			get_paste;
 			pastebin_ca
-			;;
-		a)
-			get_paste;
-			pastie
 			;;
 		t)
 			get_paste;
