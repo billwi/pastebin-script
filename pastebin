@@ -25,7 +25,6 @@ show_help() {
 	echo -e "\t-c\tSend text to pastebin.ca"
 	echo -e "\t-a\tSend text to pastie.org"
 	echo -e "\t-t\tSend text to paste2.org"
-	echo -e "\t-r\tSend text to privatepaste.com"	
 	echo -e "\t-n\tSend text to tny.cz"
 	echo -e "\t-x\tSend text to clitxt.com"
 	echo -e "\t-b\tSend text to cxg.de"
@@ -100,15 +99,6 @@ paste2() {
 	#echo $url;
 }
 
-private_paste() {
-	# grep -o: 
-	url=`curl -s --location -F "paste_content=$paste" http://privatepaste.com/save | grep -o -m1 'Paste\ ID\ [a-z0-9].*' |awk '{print $3}'|awk -F '<' '{print $1}'`
-	#echo $url;
-	echo "http://privatepaste.com/$url" 
-	echo "http://privatepaste.com/$url" | $xclip;
-
-}
-
 # as of April 15, 2015 - does not work.
 tny_cz_paste() {
 	# http://tny.cz/index.php?act=submit
@@ -169,10 +159,6 @@ while getopts ":hspuwcatrxb" opt; do
 		t)
 			get_paste;
 			paste2
-			;;
-		r)
-			get_paste;
-			private_paste
 			;;
 	 	x)
 			get_paste;
