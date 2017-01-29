@@ -4,9 +4,7 @@ linux command line script that uploads text to numerous pastebin-type sites. The
 * pastebin.com: http://pastebin.com
 * sprunge.us: http://sprunge.us
 * pastebin.ca: http://pastebin.ca
-* pasteie.org: http://pasteie.org
 * paste2.org: http://paste2.org
-* privatepaste.com: http://privatepaste.com
 * tny.cz: http://tny.cz
 * clitxt.com: http://clitxt.com
 * cxg.de: http://cxg.de
