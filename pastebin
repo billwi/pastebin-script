@@ -77,13 +77,6 @@ pastebin_ca() {
 	echo $root$url;
 }
 
-# As of Jun 23, 2012 pidgin's nopaste gives 500 Internal Error
-pidgin() {
-	# pidgin
-	curl -s --data-urlencode "paste=$paste" -d "channel=#pidgin&nick=$nameXX" http://pidgin.im/nopaste/paste 
-#| grep -A1 "This\ content\ is\ stored\ as" | awk -F \' '{print $2}'
-}
-
 paste2() {
 	# paste2
 	curl -s -F "code=$paste" -F "lang=text" http://paste2.org/;
